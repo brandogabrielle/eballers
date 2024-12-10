@@ -1,0 +1,198 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 1px;
+    padding: 1px;
+    color: #333;
+}
+
+.container {
+    width: 90%; /* Increase width to fit more content */
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Non-Printable Sections */
+.non-printable {
+    text-align: center;
+    margin: 10px;
+}
+
+.print-button {
+    background-color: #ffd500;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background-color: #c5a500;
+}
+
+/* Flexbox Layout for Two Columns */
+.half {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+/* Record Styling */
+.record {
+    flex: 1 1 calc(48% - 15px); /* Smaller width to fit two columns */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 10px; /* Reduce padding */
+    background-color: #fafafa;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px; /* Reduce spacing */
+}
+
+.record h3 {
+    margin: 0 0 8px 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 4px;
+    color: #34495e;
+    font-size: 16px; /* Smaller font size */
+}
+
+.record div {
+    margin: 5px 0; /* Reduce spacing between items */
+    line-height: 1.4; /* Adjust line height for compactness */
+}
+
+.record label {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 14px; /* Smaller font size */
+}
+
+.record ul {
+    padding-left: 15px;
+}
+
+.record ul li {
+    margin: 4px 0; /* Reduce spacing between list items */
+    font-size: 14px; /* Smaller font size */
+}
+
+/* Pagination Styles */
+.page-selector {
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.page-selector a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #06bdff;
+    margin: 0 8px;
+}
+
+.page-selector a:hover {
+    text-decoration: underline;
+}
+
+.page-selector a.active-page {
+    color: #000080;
+    text-decoration: none;
+}
+
+.bruh-button {
+    text-align: right;
+}
+
+.bruh-button a {
+    display: inline-block; /* Make it behave like a block element for alignment */
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.bruh-button a:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .record {
+        flex: 1 1 100%;
+        padding: 8px;
+    }
+
+    .record div {
+        font-size: 12px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .container {
+        width: 100%; /* Full width for printing */
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+    }
+
+    .half {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Reduce gap for printing */
+        justify-content: space-between;
+    }
+
+    .record {
+        width: calc(48% - 10px); /* Adjusted width for smaller columns */
+        border: 1px solid #ddd;
+        padding: 8px; /* Reduce padding for compactness */
+        background-color: white;
+        margin-bottom: 10px; /* Reduce margin between records */
+        page-break-inside: avoid; /* Prevent records from splitting across pages */
+    }
+
+    .record h3 {
+        font-size: 14px; /* Smaller font for headers */
+        margin-bottom: 6px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .non-printable {
+        display: none; /* Hide print button and other non-printable elements */
+    }
+
+    .record label {
+        font-size: 12px; /* Smaller font for labels */
+    }
+
+    .record div {
+        font-size: 12px; /* Smaller font for content */
+        margin: 4px 0; /* Compact spacing */
+    }
+
+    .record ul li {
+        font-size: 12px; /* Smaller font for list items */
+    }
+    .bruh-button {
+        display: none; /* Hide the button during print */
+    }
+}

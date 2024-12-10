@@ -1,0 +1,106 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.record-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.record-container h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.record-container div {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #34495e;
+}
+
+.record-container div label {
+    font-weight: bold;
+    display: inline-block;
+    width: 150px; /* Fixed width for labels to align content */
+}
+
+.record-container ul {
+    padding-left: 20px;
+}
+
+.record-container ul li {
+    font-size: 14px;
+    margin: 5px 0;
+    list-style-type: square;
+}
+
+/* Print Button */
+.print-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #16a085;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.print-button:hover {
+    background-color: #13856a;
+}
+
+.bruh-button {
+    text-align: center;
+}
+
+.bruh-button a {
+    display: inline-block; /* Make it behave like a block element for alignment */
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.bruh-button a:hover {
+    background-color: #2980b9;
+}
+
+/* Print Specific Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .record-container {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        box-shadow: none;
+        border: none;
+    }
+
+    .print-button {
+        display: none; /* Hide the button during print */
+    }
+    .bruh-button {
+        display: none; /* Hide the button during print */
+    }
+}
